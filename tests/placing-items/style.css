@@ -1,0 +1,52 @@
+/* Has to be a square or rectangle*/
+/* items won't overlap unless explicit */
+/* always starting on starting line */
+
+.grid {
+  display: grid;
+  grid-template: 100px 100px 100px / 200px 200px 200px;
+}
+
+.grid-item {
+  color: #fff;
+  padding: 1em 2em;
+  border: 2px solid purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 
+.one {
+  background: #b823c1;
+  grid-column-start: 2;
+  grid-column-end: 4; 
+   grid-column: 1/4; 
+   grid-row-start: 2;
+  grid-row-end: 3; 
+  grid-row: 1/-1; 
+} */
+
+/* .two {
+  background: #ff5670;
+  grid-column: 2/-1;
+  grid-row: 2/3;
+} */
+
+.one {
+  background: #b823c1;
+  grid-column: 2 / span 3; /* start/ span num */
+  grid-row: 2 / span 2;
+}
+
+.two {
+  background: #ff5670;
+  grid-column: 1/-2;
+}
+
+/* default to auto height and grid items strech by default */
+/* align-items same as flexbox */
+/* justify-items horizontal */
+/* align-self same as flexbox */
+/* justify-self  horizontal */
+/* img width and heigh matches the cell */
+/* grid-gap */
